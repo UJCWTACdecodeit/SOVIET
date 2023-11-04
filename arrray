@@ -1,0 +1,48 @@
+import java.util.*;
+public class marks
+{
+    public static void main(String [] args)
+    {
+        Scanner obj = new Scanner(System.in);
+        System.out.println("Enter the number of users ");
+        int n = obj.nextInt();
+        String name[] = new String [n];
+        int r_num[] = new int[n];
+        int m1[] = new int[n];
+        int m2[] = new int [n];
+        int m3[] = new int[n];
+        int i;
+        String Grd = "";
+        for (i = 0 ; i<n;i++)
+        {
+            r_num[i] = obj.nextInt();
+            name[i]= obj.nextLine();
+            m1[i]=obj.nextInt();
+            m2[i]=obj.nextInt();
+            m3[i]=obj.nextInt();
+            if((m1[i]+m2[i]+m3[i])>=85 && (m1[i]+m2[i]+m3[i])<=300)
+            {
+                Grd = "A";
+            }
+            if((m1[i]+m2[i]+m3[i])>=75 && (m1[i]+m2[i]+m3[i])<85)
+            {
+                Grd = "B";
+            }
+            if((m1[i]+m2[i]+m3[i])>=60 && (m1[i]+m2[i]+m3[i])<75)
+            {
+                Grd = "C";
+            }
+            if ((m1[i]+m2[i]+m3[i])>=40 && (m1[i]+m2[i]+m3[i])<60)
+            {
+                Grd = "D";
+            }
+            else
+                Grd = "F";
+        }
+        printer(Grd);
+    }
+    public static void printer(String Grd)
+    {
+        System.out.println(Grd);
+    }
+}
